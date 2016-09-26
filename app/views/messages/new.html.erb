@@ -1,0 +1,17 @@
+<h2>Send an SMS</h2>
+
+<%= form_tag( "/messages", method: "post" ) do %>
+  <div class="form-group">
+    <%= label_tag "To" %><br>
+    <%= telephone_field_tag :to, nil, :class => "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag "Body" %><br>
+    <%= text_field_tag :body, nil, :class => "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= submit_tag "Send", :class => "btn btn-default" %>
+  </div>
+<% end %>

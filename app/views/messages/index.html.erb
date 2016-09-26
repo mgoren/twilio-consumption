@@ -1,0 +1,8 @@
+<h3>All Messages</h3>
+<ul>
+  <% @messages.each do |msg| %>
+    <li><%= link_to msg.body, message_path(msg) %></li>
+  <% end %>  
+</ul>
+
+<%= link_to "New Message", new_message_path %>
